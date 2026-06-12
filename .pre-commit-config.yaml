@@ -1,0 +1,26 @@
+# Pre-commit hooks. Requires a git repository.
+#
+# Activate once:
+#   git init                       # if the project is not a git repo yet
+#   pip install pre-commit
+#   pre-commit install
+#
+# Thereafter ruff lint + format run automatically on every commit. To also run
+# the test suite on commit, uncomment the local pytest hook below (note it needs
+# the venv active and is slower).
+
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff            # lint, auto-fixing what it can
+        args: [--fix]
+      - id: ruff-format     # code layout
+
+  # - repo: local
+  #   hooks:
+  #     - id: pytest-fast
+  #       name: pytest (pure-function tests)
+  #       entry: pytest tests/test_signal.py tests/test_resolve.py -q
+  #       language: system
+  #       pass_filenames: false

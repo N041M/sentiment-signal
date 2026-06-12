@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.env
+*.egg-info/
+dist/
+build/
+
+# PyTorch / ML
+*.pt
+*.pth
+*.ckpt
+wandb/
+lightning_logs/
+
+# Jupyter (nbstripout handles outputs, but ignore checkpoints)
+.ipynb_checkpoints/
+
+# Database
+*.db
+*.sqlite
+
+# IDE / tool caches
+.vscode/
+.idea/
+*.swp
+.claude/
+.pytest_cache/
+.ruff_cache/
+
+# Private, local-only files — never published
+__documents/
+CLAUDE.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets / keys
+*.pem
+*.key
+credentials*.json
